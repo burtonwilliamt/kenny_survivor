@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://dsrb3polj4xou"]
+
+[ext_resource type="Texture2D" uid="uid://bbcy6rtqdc6qg" path="res://colored_tilemap_packed.png" id="1_a0e5e"]
+[ext_resource type="Script" path="res://zombie.gd" id="1_nrnb7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_82ilk"]
+atlas = ExtResource("1_a0e5e")
+region = Rect2(88, 0, 8, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ewmax"]
+size = Vector2(8, 8)
+
+[node name="Node2D" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_nrnb7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_82ilk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ewmax")

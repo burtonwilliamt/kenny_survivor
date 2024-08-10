@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://dboecairunid6"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_abiqo"]
+[ext_resource type="Texture2D" uid="uid://bbcy6rtqdc6qg" path="res://colored_tilemap_packed.png" id="1_fpq6i"]
+[ext_resource type="PackedScene" uid="uid://dgxwe8gbgyii" path="res://zombie_spawner.tscn" id="3_ujir3"]
+[ext_resource type="PackedScene" uid="uid://dsrb3polj4xou" path="res://zombie.tscn" id="4_vj3e3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_87wmq"]
+atlas = ExtResource("1_fpq6i")
+region = Rect2(32, 0, 8, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ahmir"]
+size = Vector2(8, 8)
+
+[node name="Node2D" type="Node2D"]
+scale = Vector2(4, 4)
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(246, 127)
+motion_mode = 1
+script = ExtResource("1_abiqo")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+texture = SubResource("AtlasTexture_87wmq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_ahmir")
+
+[node name="Zombie Spawner" parent="." instance=ExtResource("3_ujir3")]
+position = Vector2(289, 126)
+zombie = ExtResource("4_vj3e3")
