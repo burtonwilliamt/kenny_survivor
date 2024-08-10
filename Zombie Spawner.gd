@@ -1,12 +1,15 @@
 extends Node2D
 
 
+@export var enabled: bool = true
 @export var wait_time_sec: float = 3.0
 @export var zombie: PackedScene
 
 var timer = Timer.new()
 
 func _ready():
+	if not self.enabled:
+		return
 	self.add_child(timer)
 	timer.timeout.connect(self.spawn_zombie)
 	timer.start(wait_time_sec)
