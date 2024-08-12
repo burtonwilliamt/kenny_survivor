@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://egnl3xg3xd6l"]
+
+[ext_resource type="Script" path="res://enemies/components/meat.gd" id="1_tfm5b"]
+[ext_resource type="Texture2D" uid="uid://cqext2vt7jnmt" path="res://tilemap.png" id="2_6jfuw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5lks"]
+atlas = ExtResource("2_6jfuw")
+region = Rect2(80, 64, 8, 8)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0fnts"]
+radius = 5.0
+
+[node name="Meat" type="RigidBody2D"]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("1_tfm5b")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_q5lks")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_0fnts")

@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://jl7vj36kd57x"]
+
+[ext_resource type="Script" path="res://weapons/bullet.gd" id="1_ckyv5"]
+[ext_resource type="Texture2D" uid="uid://cqext2vt7jnmt" path="res://tilemap.png" id="2_i54wn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_661po"]
+atlas = ExtResource("2_i54wn")
+region = Rect2(48, 32, 8, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q1yss"]
+size = Vector2(9, 4)
+
+[node name="Bullet" type="Area2D"]
+script = ExtResource("1_ckyv5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 0.785398
+texture = SubResource("AtlasTexture_661po")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_q1yss")

@@ -1,11 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://dgxwe8gbgyii"]
 
-[ext_resource type="Script" path="res://Zombie Spawner.gd" id="1_gjwa4"]
-[ext_resource type="Texture2D" uid="uid://bbcy6rtqdc6qg" path="res://colored_tilemap_packed.png" id="2_m2hom"]
+[ext_resource type="Script" path="res://maptiles/components/Zombie Spawner.gd" id="1_gjwa4"]
+[ext_resource type="Texture2D" uid="uid://cqext2vt7jnmt" path="res://tilemap.png" id="2_kwp22"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6v1kg"]
-atlas = ExtResource("2_m2hom")
-region = Rect2(40, 16, 8, 8)
+atlas = ExtResource("2_kwp22")
+region = Rect2(8, 64, 8, 8)
 
 [node name="Zombie Spawner" type="Node2D"]
 script = ExtResource("1_gjwa4")

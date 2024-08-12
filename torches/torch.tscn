@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://huo1nvid8jdy"]
+
+[ext_resource type="Texture2D" uid="uid://cqext2vt7jnmt" path="res://tilemap.png" id="1_gr4w3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iaoag"]
+atlas = ExtResource("1_gr4w3")
+region = Rect2(64, 40, 8, 8)
+
+[sub_resource type="Gradient" id="Gradient_hybfm"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_jcjr0"]
+gradient = SubResource("Gradient_hybfm")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.834862, 0.12844)
+
+[node name="Torch" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_iaoag")
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+color = Color(1, 0.732645, 0.64541, 1)
+energy = 2.0
+blend_mode = 2
+texture = SubResource("GradientTexture2D_jcjr0")

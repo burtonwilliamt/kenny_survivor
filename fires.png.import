@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dg6ab36mqmixm"
-path="res://.godot/imported/colored_tilemap_packed_black_background.png-e51ef83dfdfb7c1cac9ecb1e2ca58060.ctex"
+uid="uid://dxhyk1o6jy2s4"
+path="res://.godot/imported/fires.png-31f02bdeeb38d30223e47c79b113bf09.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://colored_tilemap_packed_black_background.png"
-dest_files=["res://.godot/imported/colored_tilemap_packed_black_background.png-e51ef83dfdfb7c1cac9ecb1e2ca58060.ctex"]
+source_file="res://fires.png"
+dest_files=["res://.godot/imported/fires.png-31f02bdeeb38d30223e47c79b113bf09.ctex"]
 
 [params]
 
